@@ -40,7 +40,7 @@ def KNN(K):
             K_labels.append((train_labels[(distance[t][0])-1])[0])
         # counts_label邻近数据中频率最大的类标签及频率.
         counts_label = Counter(K_labels).most_common(1)
-        print("第{}条目标数据预测类别为:{}".format(i+1, (counts_label[0])[0]))
+        print("第{}条目标数据预测类别为:{}---正确类别为：{}".format(i+1, (counts_label[0])[0], goal_labels[i][0]))
         if (counts_label[0])[0] == ((goal_labels[i])[0]):
             exact_amount = exact_amount + 1
     # 准确率计算.

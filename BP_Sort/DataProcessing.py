@@ -29,8 +29,3 @@ def onehot_data(raw_data):
         原理：将原始数据onehot编码，形成由25个向量构成的向量组.
     """
     return pd.get_dummies(raw_data,prefix=raw_data.columns)
-
-# if __name__ == '__main__':
-#         raw_data = download_data()
-#         data = onehot_data(raw_data)
-#         print(data.head())

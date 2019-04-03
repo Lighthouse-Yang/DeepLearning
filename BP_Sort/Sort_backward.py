@@ -82,10 +82,6 @@ def main():
     train_data = data[:scale]
     test_data = data[scale:]
     INPUT = tf.placeholder(tf.float32, [None, 25], "input")
-    # 此处数据读取不明白该怎么处理.
-    """
-        mnist数据集是将训练数据与测试数据分开,而这个案例是一张csv的表格，不明白怎么处理.
-    """
     backward(train_data)
 
 
